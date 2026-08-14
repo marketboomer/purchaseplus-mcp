@@ -1,0 +1,13 @@
+{
+  "name": "purchaseplus",
+  "owner": {
+    "name": "Marketboomer"
+  },
+  "plugins": [
+    {
+      "name": "purchaseplus",
+      "source": "./",
+      "description": "PurchasePlus OAuth MCP and product skills"
+    }
+  ]
+}

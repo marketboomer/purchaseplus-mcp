@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "purchaseplus",
+  "version": "1.0.0",
+  "description": "PurchasePlus purchaser tools and skills. Connects over OAuth to the hosted MCP at https://purchaseplus.com/mcp.",
+  "author": {
+    "name": "Marketboomer",
+    "url": "https://www.purchaseplus.com"
+  },
+  "homepage": "https://www.purchaseplus.com",
+  "repository": "https://github.com/marketboomer/purchaseplus-mcp",
+  "license": "MIT",
+  "keywords": ["purchaseplus", "procurement", "mcp", "oauth"]
+}

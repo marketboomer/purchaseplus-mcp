@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "purchaseplus": {
+      "type": "http",
+      "url": "https://purchaseplus.com/mcp"
+    }
+  }
+}
