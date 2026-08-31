@@ -1,0 +1,19 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.purchaseplus/mcp",
+  "title": "PurchasePlus",
+  "description": "Hospitality procurement: catalogues, requisitions, POs, receiving, invoices, buy lists, and reports.",
+  "version": "1.0.0",
+  "websiteUrl": "https://www.purchaseplus.com",
+  "repository": {
+    "url": "https://github.com/marketboomer/purchaseplus-mcp",
+    "source": "github",
+    "id": "1333660703"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://purchaseplus.com/mcp"
+    }
+  ]
+}
