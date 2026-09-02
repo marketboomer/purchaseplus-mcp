@@ -36,10 +36,14 @@ Requisition → Purchase Order → Receiving Note → Invoice → Credit Note �
 - list_statements / get_statement
 - list_products
 - list_suppliers
-- list_reports / get_report / get_report_execution
+- list_reports / get_report / get_report_execution / download_report_execution
 - list_buy_lists / get_buy_list
 - create_requisition / update_requisition
 - create_requisition_line / update_requisition_line
 - reorder_requisition
 - create_buy_list_product
 - export_report
+
+After export_report, poll get_report_execution until completed, then
+download_report_execution. Open downloadUrl as a top-level browser navigation;
+do not fetch() (S3 CORS). The tool does not return file bytes.
