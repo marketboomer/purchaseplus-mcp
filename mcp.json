@@ -4,6 +4,10 @@
     "purchaseplus": {
       "type": "streamable-http",
       "url": "https://purchaseplus.com/mcp"
+    },
+    "purchaseplus-supplier": {
+      "type": "streamable-http",
+      "url": "https://purchaseplus.com/mcp/supplier"
     }
   }
 }
