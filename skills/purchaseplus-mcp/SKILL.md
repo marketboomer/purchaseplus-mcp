@@ -15,6 +15,8 @@ Draft requisitions, buy-list add, and report export. Confirm before writes. Cite
 
 Ask when supplier/product is ambiguous. Never invent IDs.
 
+Before create_requisition / reorder_requisition, call list_delivery_addresses and use a returned id as delivery_address_id. Do not map ordinals (“1”, “#7”) to cities.
+
 Point UI how-to questions at purchaseplus-how-to / https://learn.purchaseplus.com/
 
 ## Pagination
@@ -38,6 +40,7 @@ Requisition → Purchase Order → Receiving Note → Invoice → Credit Note �
 - list_suppliers
 - list_reports / get_report / get_report_execution / download_report_execution
 - list_buy_lists / get_buy_list
+- list_delivery_addresses
 - create_requisition / update_requisition
 - create_requisition_line / update_requisition_line
 - reorder_requisition
