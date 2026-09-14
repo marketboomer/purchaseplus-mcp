@@ -1,6 +1,6 @@
 ---
 name: purchaseplus-mcp
-description: Use when reading or changing PurchasePlus data through the hosted OAuth purchaser MCP (https://purchaseplus.com/mcp). Covers requisitions, purchase orders, receiving notes, invoices, credit notes, statements, products, suppliers, reports, and buy lists.
+description: Use when reading or changing PurchasePlus data through the hosted OAuth purchaser MCP (https://purchaseplus.com/mcp). Covers requisitions, purchase orders, receiving notes, invoices, credit notes, statements, products, suppliers, catalogues, reports, and buy lists.
 ---
 
 # PurchasePlus MCP
@@ -36,6 +36,7 @@ Requisition → Purchase Order → Receiving Note → Invoice → Credit Note �
 - list_statements / get_statement
 - list_products
 - list_suppliers
+- list_catalogs / get_catalog / list_catalog_products
 - list_reports / get_report / get_report_execution / download_report_execution
 - list_buy_lists / get_buy_list
 - create_requisition / update_requisition
@@ -47,3 +48,9 @@ Requisition → Purchase Order → Receiving Note → Invoice → Credit Note �
 After export_report, poll get_report_execution until completed, then
 download_report_execution. Open downloadUrl as a top-level browser navigation;
 do not fetch() (S3 CORS). The tool does not return file bytes.
+
+Catalogues are list/inspect only. list_catalogs → get_catalog (header
+only) → list_catalog_products (needs catalogue_id; lines and prices).
+Named product: filters.search_text. Prices are catalogue-line
+sellUnitPrice / sellUnitTax / sellUnitTaxPercentage, not buy-list
+availableQuotes. Do not invent cheapest-price or UOM comparisons.
