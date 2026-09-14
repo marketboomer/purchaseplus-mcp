@@ -35,7 +35,7 @@ Do not invent IDs, aggregates, or spend rankings.
 
 - Location: list_stock_locations then get_stock_location. Nested stockLevels
   have balanceQuantity (on-hand) and unitValue (WAC where Inventory shows it).
-- Named product: list_stock_items with filters.searchText (plus paging) then
+- Named product: list_stock_items with filters.search_text (plus paging) then
   get_stock_item. Returns totalBalanceQuantity and per-location balanceQuantity /
   unitValue. averageUnitValue is the existing stock-item field (unweighted
   average of unit values — not a new weighted rollup).
