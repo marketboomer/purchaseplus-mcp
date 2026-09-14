@@ -4,7 +4,7 @@ This plugin connects to PurchasePlus over OAuth. You grant consent with your own
 
 ## What the assistant can do
 
-With your consent, the assistant can search catalogues, draft requisitions, add items to a buy list, and export reports.
+With your consent, the assistant can search catalogues, draft requisitions, add items to a buy list, export reports, list or inspect recipes, and add a recipe line.
 
 ## Organisation context
 
