@@ -1,6 +1,6 @@
 ---
 name: purchaseplus-mcp
-description: Use when reading or changing PurchasePlus data through the hosted OAuth purchaser MCP (https://purchaseplus.com/mcp). Covers requisitions, purchase orders, receiving notes, invoices, credit notes, statements, products, suppliers, reports, and buy lists.
+description: Use when reading or changing PurchasePlus data through the hosted OAuth purchaser MCP (https://purchaseplus.com/mcp). Covers requisitions, purchase orders, receiving notes, invoices, credit notes, statements, products, suppliers, reports, buy lists, and inventory transfers.
 ---
 
 # PurchasePlus MCP
@@ -25,6 +25,14 @@ List tools accept first/after pagination plus optional filters and sorts. Get to
 
 Requisition → Purchase Order → Receiving Note → Invoice → Credit Note → Statement
 
+## Transfers
+
+List/inspect only. Do not create, complete, cancel, send, receive, or move stock.
+
+Flow: `list_transfers` → `get_transfer`. List headers: id, transfer number, status, type, dates, from/to locations. `get_transfer` adds lines (`transfer_items_first` / `transfer_items_after`).
+
+On each `get_transfer` line, `quantityEdited` (boolean) and `originalQuantity` (float) answer whether that line quantity was changed versus the original.
+
 ## Purchaser tools
 
 - current_user
@@ -38,6 +46,7 @@ Requisition → Purchase Order → Receiving Note → Invoice → Credit Note �
 - list_suppliers
 - list_reports / get_report / get_report_execution / download_report_execution
 - list_buy_lists / get_buy_list
+- list_transfers / get_transfer
 - create_requisition / update_requisition
 - create_requisition_line / update_requisition_line
 - reorder_requisition
