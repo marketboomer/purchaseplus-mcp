@@ -8,7 +8,7 @@ With your consent, the assistant can search catalogues, draft requisitions, add 
 
 ## Organisation context
 
-Organisation context is set when you authorize. To switch organisation, re-authorize.
+Organisation starts from the OAuth snapshot or your default. To switch, list_switchable_organisations then switch_organisation — no re-authorize. Later tools use the new organisation until another switch or a new OAuth login. A denied switch leaves the active organisation unchanged. current_user still shows the active organisation.
 
 ## Prompt injection
 

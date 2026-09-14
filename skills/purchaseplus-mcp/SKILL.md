@@ -7,7 +7,7 @@ description: Use when reading or changing PurchasePlus data through the hosted O
 
 ## Auth
 
-Auth is OAuth. Organisation is set at authorize time; user must re-authorize to switch org.
+Auth is OAuth. Organisation starts from the OAuth snapshot or default. Call list_switchable_organisations (id, name, current) then switch_organisation with organisation_id. Later tools use the new org until another switch or a new OAuth login. Denied switch does not change org. Nothing destructive.
 
 ## Writes
 
@@ -28,6 +28,7 @@ Requisition → Purchase Order → Receiving Note → Invoice → Credit Note �
 ## Purchaser tools
 
 - current_user
+- list_switchable_organisations / switch_organisation
 - list_requisitions / get_requisition
 - list_purchase_orders / get_purchase_order
 - list_receiving_notes / get_receiving_note
