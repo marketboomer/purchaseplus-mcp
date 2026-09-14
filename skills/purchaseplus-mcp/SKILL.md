@@ -1,6 +1,6 @@
 ---
 name: purchaseplus-mcp
-description: Use when reading or changing PurchasePlus data through the hosted OAuth purchaser MCP (https://purchaseplus.com/mcp). Covers requisitions, purchase orders, receiving notes, invoices, credit notes, statements, products, suppliers, reports, and buy lists.
+description: Use when reading or changing PurchasePlus data through the hosted OAuth purchaser MCP (https://purchaseplus.com/mcp). Covers requisitions, purchase orders, receiving notes, invoices, invoice files, credit notes, statements, products, suppliers, reports, and buy lists.
 ---
 
 # PurchasePlus MCP
@@ -32,6 +32,7 @@ Requisition → Purchase Order → Receiving Note → Invoice → Credit Note �
 - list_purchase_orders / get_purchase_order
 - list_receiving_notes / get_receiving_note
 - list_invoices / get_invoice
+- list_invoice_files / get_invoice_file
 - list_credit_notes / get_credit_note
 - list_statements / get_statement
 - list_products
@@ -47,3 +48,10 @@ Requisition → Purchase Order → Receiving Note → Invoice → Credit Note �
 After export_report, poll get_report_execution until completed, then
 download_report_execution. Open downloadUrl as a top-level browser navigation;
 do not fetch() (S3 CORS). The tool does not return file bytes.
+
+Invoice files (invoice screen only — not receiving-note files):
+list_invoice_files then get_invoice_file. Omit file_id (or use "supplier")
+for the supplier invoice PDF as contentBase64 so the assistant can read it.
+Do not OCR or invent size codes. User-added attachments return downloadUrl
+and howToDownload only; open that URL in a top-level browser navigation and
+do not inline those bytes.
