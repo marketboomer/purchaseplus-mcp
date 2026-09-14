@@ -27,6 +27,9 @@ Requisition → Purchase Order → Receiving Note → Invoice → Credit Note �
 
 ## Purchaser tools
 
+Connectors that do not install the plugin should call list_plugin_skills first and follow those texts.
+
+- list_plugin_skills
 - current_user
 - list_requisitions / get_requisition
 - list_purchase_orders / get_purchase_order

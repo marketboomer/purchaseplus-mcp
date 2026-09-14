@@ -7,6 +7,8 @@
 3. Enter `https://purchaseplus.com/mcp`.
 4. Complete OAuth in the browser.
 
+These connectors do not get bundled skills. Call `list_plugin_skills` first and follow those texts.
+
 ## Claude Code
 
 Add the marketplace, then install the plugin:

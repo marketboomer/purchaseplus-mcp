@@ -12,7 +12,7 @@ MCP server: [https://purchaseplus.com/mcp](https://purchaseplus.com/mcp)
 
 ## Skills
 
-Skills ship with the plugin. They tell agents to fetch live how-to documentation from [https://learn.purchaseplus.com/](https://learn.purchaseplus.com/).
+Skills ship with the plugin. They tell agents to fetch live how-to documentation from [https://learn.purchaseplus.com/](https://learn.purchaseplus.com/). Clients that do not install the plugin should fetch skills on demand via `list_plugin_skills`. It returns named full texts: purchaseplus (router), purchaseplus-how-to (help centre), purchaseplus-mcp (tool-use).
 
 ## Install
 
