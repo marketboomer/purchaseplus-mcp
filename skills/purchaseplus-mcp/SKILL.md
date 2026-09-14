@@ -1,6 +1,6 @@
 ---
 name: purchaseplus-mcp
-description: Use when reading or changing PurchasePlus data through the hosted OAuth purchaser MCP (https://purchaseplus.com/mcp). Covers requisitions, purchase orders, receiving notes, invoices, credit notes, statements, products, suppliers, reports, and buy lists.
+description: Use when reading or changing PurchasePlus data through the hosted OAuth purchaser MCP (https://purchaseplus.com/mcp). Covers requisitions, purchase orders, receiving notes, invoices, credit notes, statements, products, suppliers, reports, buy lists, and inventory.
 ---
 
 # PurchasePlus MCP
@@ -19,11 +19,28 @@ Point UI how-to questions at purchaseplus-how-to / https://learn.purchaseplus.co
 
 ## Pagination
 
-List tools accept first/after pagination plus optional filters and sorts. Get tools take a numeric id.
+List tools accept first/after pagination plus optional filters and sorts. Get
+tools take a numeric id; inventory gets also page nested stockLevels
+(stock_levels_first / stock_levels_after from pageInfo.endCursor when
+hasNextPage).
 
 ## Procure-to-pay chain
 
 Requisition → Purchase Order → Receiving Note → Invoice → Credit Note → Statement
+
+## Inventory
+
+List/inspect only. No create, adjust, count, transfer, delete, or stock move.
+Do not invent IDs, aggregates, or spend rankings.
+
+- Location: list_stock_locations then get_stock_location. Nested stockLevels
+  have balanceQuantity (on-hand) and unitValue (WAC where Inventory shows it).
+- Named product: list_stock_items with filters.searchText (plus paging) then
+  get_stock_item. Returns totalBalanceQuantity and per-location balanceQuantity /
+  unitValue. averageUnitValue is the existing stock-item field (unweighted
+  average of unit values — not a new weighted rollup).
+- If stockLevels pageInfo.hasNextPage, pass stock_levels_after so on-hand/WAC
+  is not under-reported.
 
 ## Purchaser tools
 
@@ -38,6 +55,8 @@ Requisition → Purchase Order → Receiving Note → Invoice → Credit Note �
 - list_suppliers
 - list_reports / get_report / get_report_execution / download_report_execution
 - list_buy_lists / get_buy_list
+- list_stock_locations / get_stock_location
+- list_stock_items / get_stock_item
 - create_requisition / update_requisition
 - create_requisition_line / update_requisition_line
 - reorder_requisition

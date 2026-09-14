@@ -2,7 +2,7 @@
 
 Official Marketboomer plugin and connection package for PurchasePlus AI assistants.
 
-Use it to connect Cursor, Claude, ChatGPT, and other MCP-capable clients to PurchasePlus. With purchaser access, an assistant can search catalogues, draft requisitions, add items to a buy list, and export reports.
+Use it to connect Cursor, Claude, ChatGPT, and other MCP-capable clients to PurchasePlus. With purchaser access, an assistant can search catalogues, look up inventory (stock locations, on-hand, and WAC), draft requisitions, add items to a buy list, and export reports.
 
 ## Sign-in
 
