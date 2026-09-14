@@ -1,6 +1,6 @@
 ---
 name: purchaseplus-mcp
-description: Use when reading or changing PurchasePlus data through the hosted OAuth purchaser MCP (https://purchaseplus.com/mcp). Covers requisitions, purchase orders, receiving notes, invoices, credit notes, statements, products, suppliers, reports, and buy lists.
+description: Use when reading or changing PurchasePlus data through the hosted OAuth purchaser MCP (https://purchaseplus.com/mcp). Covers requisitions, purchase orders, receiving notes, invoices, credit notes, statements, products, suppliers, reports, buy lists, invoice-from-document upload, and priced-catalogue CSV import.
 ---
 
 # PurchasePlus MCP
@@ -11,7 +11,9 @@ Auth is OAuth. Organisation is set at authorize time; user must re-authorize to 
 
 ## Writes
 
-Draft requisitions, buy-list add, and report export. Confirm before writes. Cite IDs after actions.
+Draft requisitions, buy-list add, report export, invoice-from-document upload, and priced-catalogue CSV import. Confirm before writes. Cite IDs after actions.
+
+File uploads: pass an HTTPS `file_url`. Never paste file contents or base64 into the tool.
 
 Ask when supplier/product is ambiguous. Never invent IDs.
 
@@ -43,6 +45,17 @@ Requisition → Purchase Order → Receiving Note → Invoice → Credit Note �
 - reorder_requisition
 - create_buy_list_product
 - export_report
+- create_invoice_from_document
+- create_catalogue_import
+
+`create_invoice_from_document` starts the app's create-invoice-from-uploaded-document
+action. Requires `file_url` (HTTPS PDF). Optional supplier_id / document_number /
+currency. Not for attaching a file to an existing invoice. Invoice birth is async
+as in the app; there is no extra confirm.
+
+`create_catalogue_import` starts a priced-catalogue CSV import. Requires `file_url`
+(HTTPS CSV) and `catalogue_id`. Not buy lists or other import kinds. Follow-up is
+in the app.
 
 After export_report, poll get_report_execution until completed, then
 download_report_execution. Open downloadUrl as a top-level browser navigation;
