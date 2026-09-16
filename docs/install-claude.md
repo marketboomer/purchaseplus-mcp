@@ -7,6 +7,8 @@
 3. Enter `https://purchaseplus.com/mcp` for purchaser, or `https://purchaseplus.com/mcp/supplier` for supplier.
 4. Complete OAuth in the browser.
 
+These connectors do not get bundled skills. Call `list_plugin_skills` first and follow those texts.
+
 Dual-role users add the surface that matches the active organisation (or both). Supplier MCP is list/inspect plus entitled report export only.
 
 ## Claude Code
