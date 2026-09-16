@@ -23,4 +23,4 @@ If you prefer to add the server yourself, put this in `~/.cursor/mcp.json` or th
 }
 ```
 
-Sign-in is OAuth only.
+Sign-in is OAuth only. This fallback does not install the plugin. Call `list_plugin_skills` first and follow those texts.

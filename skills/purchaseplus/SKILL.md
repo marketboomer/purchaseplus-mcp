@@ -1,6 +1,6 @@
 ---
 name: purchaseplus
-description: Use when the user mentions PurchasePlus, Purchase Plus, P+, requisitions, purchase orders, POs, invoices, credit notes, receiving notes, suppliers, products, buy lists, catalogues, connections, or PurchasePlus MCP tools. Routes how-to questions to the help center skill, purchaser data/actions to the purchaser MCP skill, and supplier-org data/actions to the supplier MCP skill.
+description: Use when the user mentions PurchasePlus, Purchase Plus, P+, requisitions, purchase orders, POs, invoices, credit notes, receiving notes, suppliers, products, catalogues, buy lists, recipes, inventory, stock locations, stocktakes, connections, or PurchasePlus MCP tools. Routes how-to questions to the help center skill, purchaser data/actions to the purchaser MCP skill, and supplier-org data/actions to the supplier MCP skill.
 ---
 
 # PurchasePlus

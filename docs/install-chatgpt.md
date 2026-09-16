@@ -11,4 +11,4 @@ The same git repository, [https://github.com/marketboomer/purchaseplus-mcp](http
 
 ## Skills
 
-If the ChatGPT plugin or app install includes this repository, the bundled skills apply. Otherwise, tell the model to use [https://learn.purchaseplus.com/](https://learn.purchaseplus.com/) for how-to documentation.
+If the ChatGPT plugin or app install includes this repository, the bundled skills apply. Otherwise, call `list_plugin_skills` first and follow those texts. The how-to skill still points at [https://learn.purchaseplus.com/](https://learn.purchaseplus.com/).
