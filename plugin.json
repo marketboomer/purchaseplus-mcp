@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "purchaseplus",
   "version": "1.0.0",
-  "description": "PurchasePlus purchaser tools and skills. Connects over OAuth to the hosted MCP at https://purchaseplus.com/mcp.",
+  "description": "PurchasePlus purchaser and supplier tools and skills. Connects over OAuth to https://purchaseplus.com/mcp and https://purchaseplus.com/mcp/supplier.",
   "author": {
     "name": "Marketboomer",
     "url": "https://www.purchaseplus.com"

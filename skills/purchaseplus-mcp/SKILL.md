@@ -7,7 +7,7 @@ description: Use when reading or changing PurchasePlus data through the hosted O
 
 ## Auth
 
-Auth is OAuth. Organisation is set at authorize time; user must re-authorize to switch org.
+Auth is OAuth. Organisation is set at authorize time; user must re-authorize to switch org. Supplier-org users should use purchaseplus-supplier-mcp / https://purchaseplus.com/mcp/supplier.
 
 ## Writes
 

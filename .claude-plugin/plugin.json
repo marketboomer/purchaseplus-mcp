@@ -1,6 +1,6 @@
 {
   "name": "purchaseplus",
-  "description": "PurchasePlus purchaser tools and skills. Connects over OAuth to the hosted MCP at https://purchaseplus.com/mcp.",
+  "description": "PurchasePlus purchaser and supplier tools and skills. Connects over OAuth to https://purchaseplus.com/mcp and https://purchaseplus.com/mcp/supplier.",
   "version": "1.0.0",
   "author": {
     "name": "Marketboomer"

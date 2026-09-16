@@ -4,8 +4,10 @@
 
 1. Open **Settings → Connectors**.
 2. Choose **Add custom connector**.
-3. Enter `https://purchaseplus.com/mcp`.
+3. Enter `https://purchaseplus.com/mcp` for purchaser, or `https://purchaseplus.com/mcp/supplier` for supplier.
 4. Complete OAuth in the browser.
+
+Dual-role users add the surface that matches the active organisation (or both). Supplier MCP is list/inspect plus entitled report export only.
 
 ## Claude Code
 
