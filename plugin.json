@@ -10,5 +10,6 @@
   "homepage": "https://www.purchaseplus.com",
   "repository": "https://github.com/marketboomer/purchaseplus-mcp",
   "license": "MIT",
+  "logo": "assets/logo.svg",
   "keywords": ["purchaseplus", "procurement", "mcp", "oauth"]
 }
